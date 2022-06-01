@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "target": "es5",
+    "module": "commonjs",
+    "noImplicitAny": false,
+    "outDir": "dist",
+    "rootDir": "./",
+    "skipLibCheck": true
+  },
+  "include": ["index.ts", "generated/*.ts"],
+  "exclude": ["dist", "node_modules"]
+}

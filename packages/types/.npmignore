@@ -1,0 +1,4 @@
+node_modules
+.npmrc
+index.ts
+tsconfig.json

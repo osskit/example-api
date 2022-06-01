@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.vscode
+.idea/
+.env
+.DS_Store
+/packages/client/generated/
+/packages/types/generated/
+yarn-error.log
+openapi.json

@@ -1,0 +1,6 @@
+{
+  "extends": ["@osskit"],
+  "parserOptions": {
+    "project": "./scripts/tsconfig.json"
+  }
+}
