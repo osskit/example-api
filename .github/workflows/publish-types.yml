@@ -1,0 +1,24 @@
+name: publish-types
+
+on:
+  push:
+    paths:
+      - 'packages/types/package.json'
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  publish-package:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 18
+      - run: yarn
+      - run: yarn build:types
+      - run: npm publish
+        working-directory: ./packages/types
