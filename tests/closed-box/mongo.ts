@@ -1,6 +1,6 @@
 import type { Db } from 'mongodb';
 import { MongoClient, ReadPreference } from 'mongodb';
-import type { Pokemon } from '../../packages/client';
+import type { Example } from '../../packages/client';
 
 let connection: {
   db: Db;
@@ -26,12 +26,12 @@ export const init = async () => {
 };
 const getCollection = <T>(collectionName: string) => connection.db.collection<T>(collectionName);
 
-const getPokemonCollection = () => getCollection<Pokemon>('pokemons');
+const getExampleCollection = () => getCollection<Example>('examples');
 
 export const clear = async () => {
-  await getPokemonCollection().deleteMany({});
+  await getExampleCollection().deleteMany({});
 };
 
-export const insertPokemons = (pokemons: Pokemon[]) => getPokemonCollection().insertMany(pokemons);
+export const insertExamples = (examples: Example[]) => getExampleCollection().insertMany(examples);
 
 export const close = () => (connection.client ? connection.client.close() : null);

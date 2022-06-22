@@ -1,6 +1,6 @@
-import type { FastifyInstance } from 'fastify';
-import { pokemon } from './controllers/PokemonController.js';
+import type { TypeBoxFastifyInstance } from '../../types/fastify';
+import { exampleController } from './controllers/example.controller.js';
 
-export const v1 = async (fastify: FastifyInstance) => {
-  await fastify.register(pokemon, { prefix: '/pokemons' });
+export const v1 = async (fastify: TypeBoxFastifyInstance) => {
+  await fastify.register(exampleController, { prefix: '/examples' });
 };

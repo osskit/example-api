@@ -1,7 +1,7 @@
-import type { FastifyInstance } from 'fastify';
 import fastifyHelmet from '@fastify/helmet';
+import type { TypeBoxFastifyInstance } from '../../types/fastify';
 
-export const helmet = async (fastify: FastifyInstance) => {
+export const helmet = async (fastify: TypeBoxFastifyInstance) => {
   await fastify.register(fastifyHelmet, (instance) => ({
     contentSecurityPolicy: {
       directives: {

@@ -1,5 +1,5 @@
-import type { Server } from 'http';
-import { setTimeout } from 'timers/promises';
+import type { Server } from 'node:http';
+import { setTimeout } from 'node:timers/promises';
 import { createTerminus } from '@godaddy/terminus';
 import { logger } from '../../framework/logger.js';
 import { close, ping } from '../../framework/mongo.js';

@@ -2,10 +2,7 @@ version: '3.9'
 
 services:
   service:
-    build:
-      context: ../..
-      args:
-        - NPM_TOKEN
+    build: ../..
     ports:
       - '3000:3000'
     env_file:
