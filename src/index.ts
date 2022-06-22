@@ -1,4 +1,4 @@
-import 'dotenv/config';
+import 'dotenv/config.js';
 
 import { logger } from './framework/logger.js';
 import handleDisaster from './framework/handleDisaster.js';

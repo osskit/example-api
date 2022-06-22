@@ -1,39 +1,34 @@
 import { createMonitor } from '@osskit/monitor';
-import { ReturnDocument } from 'mongodb';
+import { v4 as uuid } from 'uuid';
 import { getCollection } from '../framework/mongo.js';
-import type { Pokemon, UUID } from '../schemas/models.js';
+import type { Example, UUID } from '../schemas/models.js';
+import type { CreateExamplePayload } from '../schemas/api';
 
 const monitor = createMonitor({ scope: 'mongo' });
 
-const getPokemonCollection = () => getCollection<Pokemon>('pokemon');
+const getExamplesCollection = () => getCollection<Example>('examples');
 
-export const getPokemon = (id: UUID): Promise<Pokemon | null> =>
-  monitor('getPokemon', () => getPokemonCollection().findOne({ id }), { context: { id } });
+export const getExample = (id: UUID): Promise<Example | null> =>
+  monitor('getExample', () => getExamplesCollection().findOne({ id }), { context: { id } });
 
-export const upsertPokemon = (pokemon: Pokemon): Promise<Pokemon> =>
-  monitor(
-    'upsertPokemon',
+export const createExample = ({ type, name }: CreateExamplePayload): Promise<Example> => {
+  const example = { id: uuid(), name, type };
+
+  return monitor(
+    'createExample',
     async () => {
-      const result = await getPokemonCollection().findOneAndUpdate(
-        pokemon,
-        {
-          $set: pokemon,
-        },
-        {
-          upsert: true,
-          returnDocument: ReturnDocument.AFTER,
-        },
-      );
+      const result = await getExamplesCollection().insertOne(example);
 
-      if (!result.ok) {
-        throw new Error('Pokemon could not created');
+      if (!result.acknowledged) {
+        throw new Error('example could not created');
       }
 
-      return result.value!;
+      return example;
     },
     {
       context: {
-        pokemon,
+        example,
       },
     },
   );
+};

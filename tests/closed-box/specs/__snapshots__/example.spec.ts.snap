@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`main create example 1`] = `
+Object {
+  "id": Any<String>,
+  "name": "name",
+  "type": "a",
+}
+`;
+
+exports[`main get example 1`] = `
+Object {
+  "id": "6740239e-a263-4933-9c8e-b397ba473fa5",
+  "name": "name",
+  "type": "a",
+}
+`;

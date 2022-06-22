@@ -1,9 +1,9 @@
-FROM node:16-alpine as base
+FROM node:18-alpine as base
 WORKDIR /service
 
 FROM base as dependencies
 ARG NPM_TOKEN
-COPY package.json yarn.lock tsconfig.json .npmrc ./
+COPY package.json yarn.lock tsconfig.json ./
 RUN yarn --pure-lockfile --production true
 
 FROM dependencies as build

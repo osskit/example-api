@@ -1,6 +1,6 @@
-import type { FastifyInstance } from 'fastify';
 import fastifySwagger from '@fastify/swagger';
 import { nodeEnv } from '../../framework/environment.js';
+import type { TypeBoxFastifyInstance } from '../../types/fastify';
 
 export const security = [
   {
@@ -8,7 +8,7 @@ export const security = [
   },
 ];
 
-export const openapi = async (fastify: FastifyInstance) => {
+export const openapi = async (fastify: TypeBoxFastifyInstance) => {
   await fastify.register(fastifySwagger, {
     openapi: {
       info: {

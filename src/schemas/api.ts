@@ -1,10 +1,7 @@
 import type { Static } from '@sinclair/typebox';
 import { Type } from '@sinclair/typebox';
-import { pokemonTypeRef } from './models.js';
+import { exampleRef } from './models.js';
 
-export const createPokemonPayloadSchema = Type.Object({
-  type: pokemonTypeRef,
-  name: Type.String(),
-});
+export const createExamplePayloadSchema = Type.Omit(exampleRef, ['id'], { $id: 'CreateExamplePayload' });
 
-export type CreatePokemonPayload = Static<typeof createPokemonPayloadSchema>;
+export type CreateExamplePayload = Static<typeof createExamplePayloadSchema>;

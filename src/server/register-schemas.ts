@@ -1,8 +1,8 @@
-import type { FastifyInstance } from 'fastify';
-import { pokemonTypeSchema, uuidSchema, pokemonSchema } from '../schemas/models.js';
+import { exampleTypeSchema, uuidSchema, exampleSchema } from '../schemas/models.js';
+import type { TypeBoxFastifyInstance } from '../types/fastify.js';
 
-export const registerSchemas = (fastify: FastifyInstance) => {
+export const registerSchemas = (fastify: TypeBoxFastifyInstance) => {
   fastify.addSchema(uuidSchema);
-  fastify.addSchema(pokemonSchema);
-  fastify.addSchema(pokemonTypeSchema);
+  fastify.addSchema(exampleSchema);
+  fastify.addSchema(exampleTypeSchema);
 };

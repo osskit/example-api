@@ -1,8 +1,8 @@
-import type { FastifyInstance } from 'fastify';
 import promBundle from 'express-prom-bundle';
 import middie from '@fastify/middie';
+import type { TypeBoxFastifyInstance } from '../../types/fastify';
 
-export const metrics = async (fastify: FastifyInstance) => {
+export const metrics = async (fastify: TypeBoxFastifyInstance) => {
   await fastify.register(middie);
 
   fastify.use(
