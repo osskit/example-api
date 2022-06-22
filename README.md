@@ -1,1 +1,1 @@
-# service-example
+# example-api
