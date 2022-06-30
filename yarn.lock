@@ -780,6 +780,13 @@
   resolved "https://registry.yarnpkg.com/@osskit/prettier-config/-/prettier-config-0.0.1.tgz#f3e7751e694c53b9f376dd78e01fd4d94536261b"
   integrity sha512-kmu9L9TDczSG4TvVDMveZ/6oi2GtzZa2Oyw8zoup9F/SHNXiszjAhuTcZeCggA1XaoFanr9Wa4xopa/PGoV89g==
 
+"@osskit/tsconfig@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@osskit/tsconfig/-/tsconfig-0.0.3.tgz#a59e96fac4e549be378528fd18af41de8bea8450"
+  integrity sha512-HS0pFEChvxokxw11GCFjFJ3PI/yOy2mLXYJvNqLd+MkoTniCImAYncOlA9F+eow8uLX4yAXqduA0uDkBNKhkbg==
+  dependencies:
+    "@sindresorhus/tsconfig" "^3.0.1"
+
 "@sinclair/typebox@^0.23.3", "@sinclair/typebox@^0.23.5":
   version "0.23.5"
   resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.23.5.tgz#93f7b9f4e3285a7a9ade7557d9a8d36809cbc47d"
@@ -794,6 +801,11 @@
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-4.6.0.tgz#3c7c9c46e678feefe7a2e5bb609d3dbd665ffb3f"
   integrity sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw==
+
+"@sindresorhus/tsconfig@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@sindresorhus/tsconfig/-/tsconfig-3.0.1.tgz#e2eaebda42aa7a755b11bdfbea847446652e1ac4"
+  integrity sha512-0/gtPNTY3++0J2BZM5nHHULg0BIMw886gqdn8vWN+Av6bgF5ZU2qIcHubAn+Z9KNvJhO8WFE+9kDOU3n6OcKtA==
 
 "@sinonjs/commons@^1.7.0":
   version "1.8.3"

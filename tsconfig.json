@@ -1,25 +1,6 @@
 {
+  "extends": "@osskit/tsconfig",
   "compilerOptions": {
-    "target": "ESNext",
-    "lib": ["esnext"],
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "outDir": "dist",
-    "removeComments": true,
-    "strict": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "resolveJsonModule": false,
-    "skipLibCheck": true,
-    "sourceMap": true,
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "experimentalDecorators": true
-  },
-  "ts-node": {
-    "esm": true
-  },
-  "include": ["src/**/*"]
+    "outDir": "dist"
+  }
 }
