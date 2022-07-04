@@ -1,7 +1,6 @@
-import Fastify from 'fastify';
+import { fastify } from 'fastify';
 import fastifyCors from '@fastify/cors';
 import type { TypeBoxTypeProvider } from '@fastify/type-provider-typebox';
-import { ajvTypeBoxPlugin } from '@fastify/type-provider-typebox';
 import { enforceHeaders } from '@osskit/fastify-enforce-headers';
 import { logger } from '../framework/logger.js';
 import { trace } from './plugins/tracing.js';
@@ -11,28 +10,26 @@ import { v1 } from './v1/index.js';
 import { openapi } from './plugins/openapi.js';
 import { registerSchemas } from './register-schemas.js';
 
-const fastify = Fastify({
+const server = fastify({
   logger,
   ajv: {
-    plugins: [ajvTypeBoxPlugin],
     customOptions: {
       coerceTypes: 'array',
-      strict: 'log',
     },
   },
 }).withTypeProvider<TypeBoxTypeProvider>();
 
 export const init = async () => {
-  registerSchemas(fastify);
-  await openapi(fastify);
+  registerSchemas(server);
+  await openapi(server);
 
-  await trace(fastify);
-  await metrics(fastify);
-  await fastify.register(enforceHeaders);
-  await fastify.register(fastifyCors);
-  await helmet(fastify);
+  await trace(server);
+  await metrics(server);
+  await server.register(enforceHeaders);
+  await server.register(fastifyCors);
+  await helmet(server);
 
-  await fastify.register(v1, { prefix: '/v1' });
+  await server.register(v1, { prefix: '/v1' });
 
-  return fastify;
+  return server;
 };
