@@ -780,6 +780,15 @@
     fastify-plugin "^3.0.1"
     http-errors "^2.0.0"
 
+"@osskit/fetch-enhancers@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@osskit/fetch-enhancers/-/fetch-enhancers-3.0.0.tgz#289766890a1ba32716c2af5fc1a1805b38cc7a04"
+  integrity sha512-2oTOclJS9BEdZ6AZSOOgSQ1DJimGvZ5K7UZIwhDSGglJOgoyXTjcGr4wCXvDZEd6ZtmOFl0YazkSf5h/9h0X7w==
+  dependencies:
+    abort-controller "^3.0.0"
+    async-retry "^1.3.3"
+    lodash.clonedeep "^4.5.0"
+
 "@osskit/monitor@^5.0.0":
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/@osskit/monitor/-/monitor-5.0.0.tgz#26581986074f7ad54b6b8264e9438a05197fd549"
@@ -1319,6 +1328,13 @@ async-hook-jl@^1.7.6:
   integrity sha512-gFaHkFfSxTjvoxDMYqDuGHlcRyUuamF8s+ZTtJdDzqjws4mCt7v0vuV79/E2Wr2/riMQgtG4/yUtXWs1gZ7JMg==
   dependencies:
     stack-chain "^1.3.7"
+
+async-retry@^1.3.3:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/async-retry/-/async-retry-1.3.3.tgz#0e7f36c04d8478e7a58bdbed80cedf977785f280"
+  integrity sha512-wfr/jstw9xNi/0teMHrRW7dsz3Lt5ARhYNZ2ewpadnhaIp5mbALhOAP+EAdsC7t4Z6wqsDVv9+W6gm1Dk9mEyw==
+  dependencies:
+    retry "0.13.1"
 
 asynchronous-local-storage@^1.0.2:
   version "1.0.2"
@@ -3839,6 +3855,11 @@ locate-path@^5.0.0:
   dependencies:
     p-locate "^4.1.0"
 
+lodash.clonedeep@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
+  integrity sha512-H5ZhCF25riFd9uB5UCkVKo61m3S/xZk1x4wA6yp/L3RFP6Z/eHH1ymQcGLo7J3GMPfm0V/7m1tryHuGVxpqEBQ==
+
 lodash.memoize@4.x:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
@@ -4663,6 +4684,11 @@ registry-url@^5.0.0:
   dependencies:
     rc "^1.2.8"
 
+replace-url-values@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/replace-url-values/-/replace-url-values-1.0.0.tgz#e8210935fd9b9d66ebd59c16b4b35258f59146c7"
+  integrity sha512-tH0mBmjqC22ZLQMiVdnPdHQs1PrrJwUBXECj8Gjal4JVd34fa4Qx1sw5ATKsUHxMg8yDJ+Y84NOzUuRI9GtPvA==
+
 require-directory@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/require-directory/-/require-directory-2.1.1.tgz#8c64ad5fd30dab1c976e2344ffe7f792a6a6df42"
@@ -4723,6 +4749,11 @@ ret@~0.2.0:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/ret/-/ret-0.2.2.tgz#b6861782a1f4762dce43402a71eb7a283f44573c"
   integrity sha512-M0b3YWQs7R3Z917WRQy1HHA7Ba7D8hvZg6UE5mLykJxQVE2ju0IXbGlaHPPlkY+WN7wFP+wUMXmBFA0aV6vYGQ==
+
+retry@0.13.1:
+  version "0.13.1"
+  resolved "https://registry.yarnpkg.com/retry/-/retry-0.13.1.tgz#185b1587acf67919d63b357349e03537b2484658"
+  integrity sha512-XQBQ3I8W1Cge0Seh+6gjj03LbmRFWuoszgK9ooCpwYIrhhoO80pfq4cUkU5DkknwfOfFteRwlZ56PYOGYyFWdg==
 
 reusify@^1.0.4:
   version "1.0.4"
