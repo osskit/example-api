@@ -18,8 +18,8 @@
     "test:closed-box:teardown": "cd tests/closed-box && docker-compose down --remove-orphans",
     "test:closed-box:setup": "yarn build:clients && cd tests/closed-box && docker-compose pull && docker-compose build && docker-compose up -d",
     "test:closed-box:logs": "docker-compose -f tests/closed-box/docker-compose.yml logs",
-    "lint:base": "eslint . --ext .ts",
-    "lint": "yarn lint:base --fix",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "yarn lint --fix",
     "format": "prettier --write '**/*.{ts,js,json,yaml,yml}'",
     "prepare": "husky install"
   },
