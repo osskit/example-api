@@ -20,4 +20,4 @@ jobs:
         with:
           node-version: '18.x'
       - run: yarn
-      - run: yarn lint:base
+      - run: yarn lint
